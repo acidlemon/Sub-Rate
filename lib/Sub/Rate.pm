@@ -72,7 +72,7 @@ sub generate {
         for my $f (@sorted_funcs) {
             $cursor += $f->[0];
 
-            if ($index <= $cursor) {
+            if ($index < $cursor) {
                 return $f->[1]->(@args);
             }
         }
